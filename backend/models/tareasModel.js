@@ -4,6 +4,11 @@ const TareasSchema = mongoose.Schema({
     descripcion: {
         type: String,
         required: [true, 'Por favor inserta una descripción.']
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        require: true,
+        ref: 'User'
     }
 }, {
     timestamps: true
